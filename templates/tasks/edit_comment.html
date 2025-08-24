@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    body {
+        background-color: rgb(34, 34, 34);
+        color: rgb(255, 255, 255);
+    }
+</style>
+<div class="container mt-3">
+    <h2>Редагувати коментар</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Оновити</button>
+    </form>
+</div>
+{% endblock %}
